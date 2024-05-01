@@ -1,0 +1,10 @@
+body {
+   margin: 0;
+   padding: 0;
+}
+a {
+   color: #aa00ff;
+}
+a[href="https://facebook.com"] {
+   color: green;
+}

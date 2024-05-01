@@ -1,0 +1,14 @@
+button {
+   width: 200px;
+   height: 40px;
+   font-size: 23px;
+   background: green;
+   color: black;
+   border-radius: 10px;
+}
+
+button:hover { 
+   background:    lightgreen;
+   border-radius:       15px;
+   transition-duration: 0.2s;
+}
