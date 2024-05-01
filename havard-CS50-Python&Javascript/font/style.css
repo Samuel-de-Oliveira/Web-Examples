@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+div {
+   border: 3px solid black;
+   margin: 20px;
+   font-family: "Arial", "sans-serif";
+   font-size: 28px;
+   font-weight: bold;
+}
