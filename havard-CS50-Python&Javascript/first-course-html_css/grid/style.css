@@ -1,0 +1,26 @@
+#grid {
+   background: green;
+   display:     grid;
+   padding:     10px;
+
+   grid-column-gap: 10px;
+   grid-row-gap:    10px;
+   grid-template-columns: 200px 200px auto;
+}
+
+.grid-item {
+   font-family: "Arial" "open-sans";
+   font-weight:  bold;
+   background:  white;
+
+   text-align:  center;
+   padding:       15px;
+   border-radius: 10px;
+}
+
+.grid-item:hover {
+   background:   #888888;
+   padding:         20px;
+
+   transition-duration: 0.3s;
+}
