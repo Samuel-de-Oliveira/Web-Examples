@@ -1,15 +1,31 @@
-$color_green: #00ff00;
-$color_red:   #ff1111;
+$color1:   #12a103;
+$color2:   #880a04;
+$bg_color: #333333;
 
-ul {
-  font-size: 12pt;
-  color: $color_green;
+%autodiv {
+  padding: 7px;
+}
 
-  li {
-   color: $color_red;
+body {
+  background: $bg_color;
+  color: white;
+}
+
+div {
+  @extend %autodiv;
+
+  ol {
+    font-family: "Arial", "open-sans";
+  }
+  ul {
+    font-family: "Dosis", "Nunito";
   }
 }
-ol {
-  font-size: 16pt;
-  color: $color_green;
+
+#d1 {
+  background: $color1;
+}
+
+#d2 {
+  background: $color2;
 }
