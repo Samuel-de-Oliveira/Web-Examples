@@ -1,0 +1,62 @@
+// Blue tones
+$blue_t0: #b0dcff;
+$blue_t1: #00a2ff;
+$blue_t2: #008cde;
+$blue_t3: #0077be;
+$blue_t4: #00639e;
+
+// Quicksand font
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $blue_t0;
+  font-family: "Quicksand", sans-serif;
+}
+
+header {
+  padding-top: 0;
+
+  h1 {
+    font-size: 27pt;
+    padding-left: 22px;
+  }
+  nav {
+    background: $blue_t4;
+    padding: 10px;
+    padding-left: 1px;
+
+    ul {
+      display: flex;
+
+      li {
+        a {
+          color: white;
+        }
+
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+h2 {
+  font-size: 20pt;
+  text-align: center;
+}
+h3 {
+  font-size: 17pt;
+}
+
+#about {
+  
+}
+
+#where-find {
+
+}
+
+#about-site {
+
+}
