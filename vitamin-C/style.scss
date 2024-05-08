@@ -5,58 +5,60 @@ $blue_t2: #008cde;
 $blue_t3: #0077be;
 $blue_t4: #00639e;
 
-// Quicksand font
+// Fonts
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-body {
+* {
   margin: 0;
   padding: 0;
-  background: $blue_t0;
-  font-family: "Quicksand", sans-serif;
 }
+
+body {
+  background: $blue_t0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 19pt;
+}
+
+ul {list-style-type: none;}
+section {margin-bottom: 20px;}
 
 header {
   padding-top: 0;
-
-  h1 {
-    font-size: 27pt;
-    padding-left: 22px;
-  }
+  
   nav {
     background: $blue_t4;
     padding: 10px;
     padding-left: 1px;
+    font-family: "Quicksand", sans-serif;
 
     ul {
       display: flex;
 
       li {
-        a {
-          color: white;
-        }
-
+        a {color: white;}
         margin-left: 10px;
         margin-right: 10px;
       }
     }
   }
 }
+
+footer {
+  background: $blue_t4;
+  color: white;
+
+  ul {display: flex;}
+  a {color: white;}
+  h2 {text-align: left;}
+}
+
+h1, h2 {font-family: "Quicksand", sans-serif;}
+h1 {
+    font-size: 35pt;
+    padding-left: 22px;
+}
 h2 {
-  font-size: 20pt;
+  font-size: 28pt;
   text-align: center;
-}
-h3 {
-  font-size: 17pt;
-}
-
-#about {
-  
-}
-
-#where-find {
-
-}
-
-#about-site {
-
 }

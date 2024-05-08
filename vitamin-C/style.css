@@ -1,22 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
-body {
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
   margin: 0;
   padding: 0;
+}
+
+body {
   background: #b0dcff;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-size: 19pt;
+}
+
+ul {
+  list-style-type: none;
+}
+
+section {
+  margin-bottom: 20px;
 }
 
 header {
   padding-top: 0;
 }
-header h1 {
-  font-size: 27pt;
-  padding-left: 22px;
-}
 header nav {
   background: #00639e;
   padding: 10px;
   padding-left: 1px;
+  font-family: "Quicksand", sans-serif;
 }
 header nav ul {
   display: flex;
@@ -29,13 +39,32 @@ header nav ul li a {
   color: white;
 }
 
-h2 {
-  font-size: 20pt;
-  text-align: center;
+footer {
+  background: #00639e;
+  color: white;
+}
+footer ul {
+  display: flex;
+}
+footer a {
+  color: white;
+}
+footer h2 {
+  text-align: left;
 }
 
-h3 {
-  font-size: 17pt;
+h1, h2 {
+  font-family: "Quicksand", sans-serif;
+}
+
+h1 {
+  font-size: 35pt;
+  padding-left: 22px;
+}
+
+h2 {
+  font-size: 28pt;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
