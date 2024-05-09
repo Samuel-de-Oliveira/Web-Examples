@@ -18,10 +18,15 @@ body {
   background: $blue_t0;
   font-family: "Open Sans", sans-serif;
   font-size: 19pt;
+
+  margin-top: 10px;
 }
 
 ul {list-style-type: none;}
-section {margin-bottom: 20px;}
+section {
+  margin: 20px;
+  margin-top: 5px; 
+}
 
 header {
   padding-top: 0;
@@ -48,7 +53,14 @@ footer {
   background: $blue_t4;
   color: white;
 
-  ul {display: flex;}
+  ul {
+    display: flex;
+    li {
+      padding-bottom: 5px;
+      padding-left: 16px;
+    }
+  }
+
   a {color: white;}
   h2 {text-align: left;}
 }

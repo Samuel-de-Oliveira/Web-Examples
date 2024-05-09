@@ -9,6 +9,7 @@ body {
   background: #b0dcff;
   font-family: "Open Sans", sans-serif;
   font-size: 19pt;
+  margin-top: 10px;
 }
 
 ul {
@@ -16,7 +17,8 @@ ul {
 }
 
 section {
-  margin-bottom: 20px;
+  margin: 20px;
+  margin-top: 5px;
 }
 
 header {
@@ -45,6 +47,10 @@ footer {
 }
 footer ul {
   display: flex;
+}
+footer ul li {
+  padding-bottom: 5px;
+  padding-left: 16px;
 }
 footer a {
   color: white;
