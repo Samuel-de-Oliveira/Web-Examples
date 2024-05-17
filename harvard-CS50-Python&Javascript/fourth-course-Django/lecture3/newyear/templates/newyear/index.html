@@ -3,7 +3,15 @@
    <head>
       <title>Datetime module test in django</title>
    </head>
-   <body>
-      {{ newyear }}
+   <body style="padding: 0; margin: 0;">
+      {{ nowdate }}
+      {% if newyear %}
+         <h2>It's new year</h2>
+      {% else %}
+         <h2>It's not new year</h2>
+      {% endif %}
+      <script>
+         window.alert('date: ' + '{{ nowdate }}')
+      </script>
    </body>
 </html>
