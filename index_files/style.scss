@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+$link_color: #035454;
+
+* {
+   margin:  0;
+   padding: 0;
+   list-style-type: none;
+}
+
+body {
+  font-size: 12pt;
+}
+
+a {
+  color: $link_color;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  transition-duration: 0.2s;
+}
+
+main {
+  padding: 20px;
+  font-size: 15pt;
+}
+footer {
+  padding: 10px;
+  ul {
+    display: flex;
+    padding: 5px;
+    li {
+      padding-left: 10px;
+    }
+  }
+}
+
+h1 {
+  font-size: 21pt;
+}
+
+h2 {
+  font-size: 18pt;
+}
