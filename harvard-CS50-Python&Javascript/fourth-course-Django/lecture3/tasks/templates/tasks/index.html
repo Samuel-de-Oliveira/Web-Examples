@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Tasks</title>
+   </head>
+   <body>
+      {% for i in tasks %}
+         <h1>{{ i }}</h1>
+      {% endfor %}
+   </body>
+   <script>
+      {% for i in tasks %}
+         window.alert('{{ i }}')
+      {% endfor %}
+   </script>
+</html>
