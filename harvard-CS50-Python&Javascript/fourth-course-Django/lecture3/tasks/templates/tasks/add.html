@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Add a new task</title>
+      <link rel="stylesheet" href="{% static 'tasks/add.css' %}">
+   </head>
+   <body>
+      <header>
+         <h1>Add a new task</h1>
+      </header>
+      <form>
+         <input type="text" name="task">
+         <input type="submit">
+      </form>
+   </body>
+</html>

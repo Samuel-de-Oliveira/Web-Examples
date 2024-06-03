@@ -1,0 +1,14 @@
+* {
+   margin:  0;
+   padding: 0;
+}
+
+body {
+   font-family: "open-sans", "sans-serif";
+   font-size:   30pt;
+}
+
+header h1 {
+   background: darkblue;
+   color: white;
+}
