@@ -1,16 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
    <head>
       <title>Tasks</title>
+      <link rel="stylesheet" href="{% static 'tasks/style.css'%}">
    </head>
    <body>
-      {% for i in tasks %}
-         <h1>{{ i }}</h1>
-      {% endfor %}
+      <header>
+         This is a unodered list created with django
+      </header>
+      <main>
+         <ul>
+            {% for i in tasks %}
+               <li>{{ i }}</li>
+            {% endfor %}
+         </ul>
+      </main>
    </body>
-   <script>
-      {% for i in tasks %}
-         window.alert('{{ i }}')
-      {% endfor %}
-   </script>
 </html>
+<script>
+   // No script!
+</script>

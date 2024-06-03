@@ -1,0 +1,25 @@
+* {
+   margin:  0;
+   padding: 0;
+}
+
+body {
+    text-align:  center;
+   list-style:  none;
+   font-size:   20pt;
+   font-weight: bold;
+   font-family: "open-sans", "sans-serif"; 
+}
+
+ul li {
+   background: lightblue;
+   margin-bottom: 5px; 
+   padding: 10px;
+}
+
+header {
+   background: darkblue;
+   margin-bottom: 7.5px;
+   color: white;
+   font-size: 30pt;
+}
