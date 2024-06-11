@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #b0dcff;
   font-family: "Open Sans", sans-serif;
@@ -21,24 +25,44 @@ section {
   margin-top: 5px;
 }
 
+#food {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+#food div {
+  background: #0077be;
+  color: white;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+}
+#food div:hover {
+  background: #00639e;
+  border-radius: 15px;
+  transition-duration: 0.3s;
+}
+
 header {
   padding-top: 0;
 }
 header nav {
   background: #00639e;
   padding: 10px;
-  padding-left: 1px;
   font-family: "Quicksand", sans-serif;
 }
 header nav ul {
   display: flex;
 }
-header nav ul li {
-  margin-left: 10px;
-  margin-right: 10px;
-}
 header nav ul li a {
   color: white;
+  background: #00639e;
+  padding: 10px;
+  text-decoration: none;
+}
+header nav ul li a:hover {
+  color: black;
+  background: #00a2ff;
+  transition-duration: 0.3s;
 }
 
 footer {

@@ -14,6 +14,10 @@ $blue_t4: #00639e;
   padding: 0;
 }
 
+html {
+ scroll-behavior: smooth; 
+}
+
 body {
   background: $blue_t0;
   font-family: "Open Sans", sans-serif;
@@ -28,23 +32,46 @@ section {
   margin-top: 5px; 
 }
 
+#food {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+
+  div {
+    background: $blue_t3;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+  } div:hover {
+    background: $blue_t4;
+    border-radius: 15px;
+    transition-duration: 0.3s;
+  }
+}
+
 header {
   padding-top: 0;
   
   nav {
     background: $blue_t4;
     padding: 10px;
-    padding-left: 1px;
     font-family: "Quicksand", sans-serif;
 
     ul {
       display: flex;
 
       li {
-        a {color: white;}
-        margin-left: 10px;
-        margin-right: 10px;
-      }
+        a {
+          color: white;
+          background: $blue_t4;
+          padding: 10px;
+          text-decoration: none;
+        } a:hover {
+          color: black;
+          background: $blue_t1;
+          transition-duration: 0.3s;
+        }
+      }    
     }
   }
 }
