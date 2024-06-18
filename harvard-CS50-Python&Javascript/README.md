@@ -8,6 +8,7 @@ that teaches about web programing
 
 - HTML
 - CSS
+- Sass CSS
 - Javascript
 - Python
 - Django
