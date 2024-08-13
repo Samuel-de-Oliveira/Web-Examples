@@ -1,7 +1,7 @@
 var countVar = 0;
 
 // Counting application
-function count() {
+document.getElementById("thebutton").onclick = function() {
    countVar = countVar + 1;
    console.log(countVar);
 

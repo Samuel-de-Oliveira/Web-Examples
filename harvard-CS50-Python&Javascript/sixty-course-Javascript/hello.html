@@ -3,14 +3,19 @@
    <head>
       <title>Hello</title>
       <script>
-         document.getElementById("click").onclick = function() {
-            alert('Hello, world!')
+         function hello() {
+            const title = document.getElementById("hello");
+            if (title.innerHTML === 'Click me!') {
+               title.innerHTML = 'Don\'t click me!'
+            } else {
+               title.innerHTML = 'Click me!'
+            }
          }
       </script>
    </head>
    <body>
       <h1>Hello!</h1>
-      <button id="click">Click me!</button>
+      <button onclick="hello()" id="hello">Click me!</button>
    </body>
 </html>
 
