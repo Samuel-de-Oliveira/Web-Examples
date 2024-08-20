@@ -1,0 +1,44 @@
+* {
+   margin:  0;
+   padding: 0;
+}
+
+body {
+   font-family: "sans-serif";
+}
+
+ul {
+   padding: 5px;
+   background: #AAAAFF;
+}
+
+#task {
+   width: 75px;
+   font-size: 15pt;
+   background: #2340DD;
+   color: white;
+   border-radius: 5px;
+
+   padding: 10px;
+   margin: 5px;
+   text-align: center;
+} #task:hover {
+   background: #AAAAFF;
+   color: black;
+   cursor: pointer;
+   transition-duration: 0.2s;
+} #task:active {
+   background: gray;
+   color: black;
+   cursor: grabbing;
+}
+
+.innerTask {
+   padding:       5px;
+   margin:        3px;
+   background:    #2323FF;
+   border-radius: 3px;
+
+   font-size:  13.5pt;
+   color:      white;
+}
