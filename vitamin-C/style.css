@@ -68,6 +68,7 @@ header nav ul li a:hover {
 footer {
   background: #00639e;
   color: white;
+  padding: 15px;
 }
 footer ul {
   display: flex;
@@ -78,6 +79,13 @@ footer ul li {
 }
 footer a {
   color: white;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+footer a:hover {
+  background: #00a2ff;
+  transition-duration: 0.5s;
 }
 footer h2 {
   text-align: left;

@@ -15,7 +15,7 @@ $blue_t4: #00639e;
 }
 
 html {
- scroll-behavior: smooth; 
+ scroll-behavior: smooth;
 }
 
 body {
@@ -71,7 +71,7 @@ header {
           background: $blue_t1;
           transition-duration: 0.3s;
         }
-      }    
+      }
     }
   }
 }
@@ -79,6 +79,7 @@ header {
 footer {
   background: $blue_t4;
   color: white;
+  padding: 15px;
 
   ul {
     display: flex;
@@ -88,7 +89,16 @@ footer {
     }
   }
 
-  a {color: white;}
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+  } a:hover {
+    background: $blue_t1;
+    transition-duration: 0.5s;
+  }
+
   h2 {text-align: left;}
 }
 
