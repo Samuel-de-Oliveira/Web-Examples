@@ -102,12 +102,16 @@ footer {
   h2 {text-align: left;}
 }
 
-h1, h2 {font-family: "Quicksand", sans-serif;}
+h1, h2, h3 {font-family: "Quicksand", sans-serif;}
 h1 {
     font-size: 35pt;
     padding-left: 22px;
 }
 h2 {
   font-size: 28pt;
+  text-align: center;
+}
+h3 {
+  font-size: 25pt;
   text-align: center;
 }
