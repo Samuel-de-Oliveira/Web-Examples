@@ -12,6 +12,7 @@ html {
 body {
   background: #b0dcff;
   font-family: "Open Sans", sans-serif;
+  text-align: justify;
   font-size: 19pt;
   margin-top: 10px;
 }
