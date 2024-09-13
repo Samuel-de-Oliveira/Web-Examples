@@ -16,14 +16,25 @@ document.querySelector('#new-task').onclick = () => {
       taskID++
       let li = document.createElement('li');
       li.innerHTML = theTask;
+      li.id = `t${taskID}`;
       listOfTasks.push(li);
 
       // Update task list
       taskList.innerHTML = "";
       for (let i = 0; i < listOfTasks.length; i++) {
+         console.log(listOfTasks);
          listOfTasks[i].onclick = () => {
-            taskList.removeChild(listOfTasks[i])
-            delete listOfTasks[i]
+            taskList.removeChild(
+               document.querySelector(`#${listOfTasks[i].id}`)
+            );
+            for (let i = 0; i < listOfTasks.length; i++) {
+               if (listOfTasks[i].id == listOfTasks[i].id) {
+                  delete listOfTasks[i]
+               }
+            }
+             listOfTasks = listOfTasks.filter(function (el) {
+               return el != null;
+            });
          }
 
          taskList.appendChild(
