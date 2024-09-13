@@ -1,6 +1,6 @@
 // Variables
 const taskList = document.querySelector("#task-list");
-var listOfTasks = {};
+var listOfTasks = [];
 var taskID = 0;
 
 if (listOfTasks.length <= 0) {
@@ -16,22 +16,19 @@ document.querySelector('#new-task').onclick = () => {
       taskID++
       let li = document.createElement('li');
       li.innerHTML = theTask;
-      listOfTasks[`value${taskID}`] = li;
-      
-      // Add remove proprety
-      li.onclick = () => {
-         //TODO: Fix the removing event
-         let ThisTaskID = taskID
-         taskList.removeChild(li);
-         delete listOfTasks[`value${ThisTaskID}`] 
-      }
+      listOfTasks.push(li);
 
       // Update task list
       taskList.innerHTML = "";
-      for (let i = 0; i < Object.keys(listOfTasks).length; i++) {
-        taskList.appendChild(
-           listOfTasks[Object.keys(listOfTasks)[i]]
-        );
+      for (let i = 0; i < listOfTasks.length; i++) {
+         listOfTasks[i].onclick = () => {
+            taskList.removeChild(listOfTasks[i])
+            delete listOfTasks[i]
+         }
+
+         taskList.appendChild(
+            listOfTasks[i]
+         );
       }
    } else {
       // In case of prompt error
