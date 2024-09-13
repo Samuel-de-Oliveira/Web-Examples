@@ -1,20 +1,40 @@
-var taskList = document.querySelector("#task-list")
+// Variables
+const taskList = document.querySelector("#task-list");
+var listOfTasks = {};
+var taskID = 0;
 
-var listOfTasks = [] 
+if (listOfTasks.length <= 0) {
+   taskList.innerHTML = "<li><b>Empty...</b></li>";
+}
 
+// Create a new task
 document.querySelector('#new-task').onclick = () => {
-   var theTask = window.prompt('Your task:')
+   let theTask = window.prompt('Your task:');
    
    if (theTask) {
-      var li = document.createElement('li')
-      li.innerHTML = theTask
-      listOfTasks.push(li)
+      // Create a new task
+      taskID++
+      let li = document.createElement('li');
+      li.innerHTML = theTask;
+      listOfTasks[`value${taskID}`] = li;
+      
+      // Add remove proprety
+      li.onclick = () => {
+         //TODO: Fix the removing event
+         let ThisTaskID = taskID
+         taskList.removeChild(li);
+         delete listOfTasks[`value${ThisTaskID}`] 
+      }
 
-      taskList.innerHTML = ""
-      for (let i = 0; i < listOfTasks.length; i++) {
-        taskList.appendChild(listOfTasks[i])
+      // Update task list
+      taskList.innerHTML = "";
+      for (let i = 0; i < Object.keys(listOfTasks).length; i++) {
+        taskList.appendChild(
+           listOfTasks[Object.keys(listOfTasks)[i]]
+        );
       }
    } else {
-      window.alert('Oh no, please digit a valid task!')
+      // In case of prompt error
+      window.alert('Oh no, please digit a valid task!');
    }
 }
