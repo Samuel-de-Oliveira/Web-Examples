@@ -1,5 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: 0;
+  list-style: none;
+}
+
 body {
   font-family: "sans-serif";
+}
+
+header, footer {
+  padding: 10px;
+  background: #6a97a8;
+  color: white;
+}
+
+main {
+  margin: 10px;
+}
+
+.blue-button {
+  background: #0000bb;
+  width: 150px;
+  padding: 7px;
+  margin: 3px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.blue-button:hover {
+  color: black;
+  background: #8888ff;
+  transition-duration: 0.2s;
+}
+
+.blue-button:active {
+  background: white;
+  transition-duration: 0.1s;
 }
 
 /*# sourceMappingURL=style.css.map */

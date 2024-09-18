@@ -9,37 +9,23 @@ if (listOfTasks.length <= 0) {
 
 // Create a new task
 document.querySelector('#new-task').onclick = () => {
-   let theTask = window.prompt('Your task:');
+   // Prompt
+   let theTask = window.prompt('Digit your task:');
    
+   // Verify if the task is valid
    if (theTask) {
       // Create a new task
-      taskID++
+      taskID++;
       let li = document.createElement('li');
       li.innerHTML = theTask;
-      li.id = `t${taskID}`;
-      listOfTasks.push(li);
+      li.classList.add('appended-Task');
 
-      // Update task list
-      taskList.innerHTML = "";
-      for (let i = 0; i < listOfTasks.length; i++) {
-         console.log(listOfTasks);
-         listOfTasks[i].onclick = () => {
-            taskList.removeChild(
-               document.querySelector(`#${listOfTasks[i].id}`)
-            );
-            for (let i = 0; i < listOfTasks.length; i++) {
-               if (listOfTasks[i].id == listOfTasks[i].id) {
-                  delete listOfTasks[i]
-               }
-            }
-             listOfTasks = listOfTasks.filter(function (el) {
-               return el != null;
-            });
-         }
+      // Append the new task
+      taskList.appendChild(li);
 
-         taskList.appendChild(
-            listOfTasks[i]
-         );
+      let listChildren = taskList.children;
+      if (listChildren.length >= 1) {
+         // Nothing yet
       }
    } else {
       // In case of prompt error
