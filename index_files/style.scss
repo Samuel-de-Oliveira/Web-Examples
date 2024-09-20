@@ -46,13 +46,12 @@ main {
     margin-left: 10px;
     display: flex;
     li {
-      padding: 7px;
+      padding: 10px;
       margin: 7px;
       background: $block_color;
       border-radius: 3px;
     } li:hover {
       background: $link_color;
-      padding: 12px;
       border-radius: 6px;
       transition-duration: 0.3s;
       a {

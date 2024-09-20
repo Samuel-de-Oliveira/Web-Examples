@@ -43,14 +43,13 @@ main ul {
   display: flex;
 }
 main ul li {
-  padding: 7px;
+  padding: 10px;
   margin: 7px;
   background: #11a3a3;
   border-radius: 3px;
 }
 main ul li:hover {
   background: #115454;
-  padding: 12px;
   border-radius: 6px;
   transition-duration: 0.3s;
 }
@@ -83,3 +82,5 @@ h2 {
   font-family: "nunito";
   font-size: 26pt;
 }
+
+/*# sourceMappingURL=style.css.map */
