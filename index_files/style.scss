@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-$link_color:  #115454;
+$link_color:  #abdbdb;
 $link_hover:  #a5dbdb;
-$block_color: #11a3a3;
+$block_color: #059797;
 $light_color: #bffdfd;
 
 * {
@@ -35,6 +35,7 @@ header {
     text-align: justify;
     margin:  5px;
     padding: 14px;
+    color: white;
     background: $block_color;
     border-radius: 5px;
   }
@@ -49,21 +50,31 @@ main {
       padding: 10px;
       margin: 7px;
       background: $block_color;
+      color: white;
       border-radius: 3px;
+      a {
+        color: white;
+      }
     } li:hover {
-      background: $link_color;
+      background: black;
       border-radius: 6px;
       transition-duration: 0.3s;
+    } li:active {
+      background: white;
+      color: black;
+      transition-duration: 0.2s;
       a {
-        color: $link_hover;
+        color: black;
       }
-  }
+    }
 }
   
 }
 footer {
   padding: 10px;
+  color: white;
   background: $block_color;
+
   ul {
     display: flex;
     padding: 5px;

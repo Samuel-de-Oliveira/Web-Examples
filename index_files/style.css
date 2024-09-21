@@ -12,7 +12,7 @@ body {
 }
 
 a {
-  color: #115454;
+  color: #abdbdb;
   text-decoration: none;
 }
 
@@ -30,7 +30,8 @@ header p {
   text-align: justify;
   margin: 5px;
   padding: 14px;
-  background: #11a3a3;
+  color: white;
+  background: #059797;
   border-radius: 5px;
 }
 
@@ -45,21 +46,31 @@ main ul {
 main ul li {
   padding: 10px;
   margin: 7px;
-  background: #11a3a3;
+  background: #059797;
+  color: white;
   border-radius: 3px;
 }
+main ul li a {
+  color: white;
+}
 main ul li:hover {
-  background: #115454;
+  background: black;
   border-radius: 6px;
   transition-duration: 0.3s;
 }
-main ul li:hover a {
-  color: #a5dbdb;
+main ul li:active {
+  background: white;
+  color: black;
+  transition-duration: 0.2s;
+}
+main ul li:active a {
+  color: black;
 }
 
 footer {
   padding: 10px;
-  background: #11a3a3;
+  color: white;
+  background: #059797;
 }
 footer ul {
   display: flex;
