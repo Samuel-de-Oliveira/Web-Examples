@@ -11,7 +11,7 @@ body {
 
 header, footer {
   padding: 10px;
-  background: #6a97a8;
+  background: #6090a0;
   color: white;
 }
 
@@ -37,6 +37,10 @@ main {
 .blue-button:active {
   background: white;
   transition-duration: 0.1s;
+}
+
+.appended-Task {
+  background: white;
 }
 
 /*# sourceMappingURL=style.css.map */
