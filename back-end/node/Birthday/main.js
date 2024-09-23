@@ -1,3 +1,5 @@
+var os = require('os');
+
 var currentDate = new Date();
 var currentYear = currentDate.getFullYear();
 var userBirth   = 2005;
@@ -7,6 +9,16 @@ if (userBirth > currentYear) {
    console.log('Please digit a valid year for the user!');
    process.exit();
 }
+
+// Show plaform
+var sysNames = {
+   "win32":  "Windows",
+   "darwin": "MacOS",
+   "linux":  "Linux"
+}
+console.log(
+   `You are Runing this on ${sysNames[os.platform()]}`
+);
 
 // Get the user Age and print
 var userAge = currentYear - userBirth;
