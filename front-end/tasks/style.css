@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,8 @@
 }
 
 body {
-  font-family: "sans-serif";
+  font-family: "Open Sans", "sans-serif";
+  font-size: 14pt;
 }
 
 header, footer {
@@ -16,12 +18,21 @@ header, footer {
 }
 
 main {
-  margin: 10px;
+  padding: 10px;
+  background: #f1d2c7;
+}
+main #inside-interface {
+  background: white;
+  padding: 7px;
+  border-radius: 7px;
+}
+main #task-list {
+  height: 50vh;
 }
 
 .blue-button {
   background: #0000bb;
-  width: 150px;
+  width: 175px;
   padding: 7px;
   margin: 3px;
   border-radius: 5px;
@@ -39,8 +50,16 @@ main {
   transition-duration: 0.1s;
 }
 
+#empty {
+  padding-left: 10px;
+  padding: 4px;
+}
+
 .appended-Task {
   background: white;
+  padding: 4px;
+  padding-left: 10px;
+  list-style: circle inside;
 }
 
 /*# sourceMappingURL=style.css.map */

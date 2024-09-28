@@ -33,13 +33,17 @@ document.querySelector('#new-task').onclick = () => {
       // Append the new task
       taskList.appendChild(li);
 
-      
       // Add remove function
       let allTasks = document.querySelectorAll(".appended-Task").forEach(
          element => {
             element.onclick = () => {
                // Remove element
-               element.remove()
+               element.remove();
+
+               // Add a <b>Empty..</b> when list is equals to zero
+               if (taskList.children.length <= 0) {
+                  taskList.innerHTML = `<li id="empty"><b>Empty...</b></li>`;
+               }
             }
          }
       );
