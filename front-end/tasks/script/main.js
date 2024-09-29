@@ -1,3 +1,5 @@
+// import { Blocks } from './blocks.mjs'
+
 // Variables
 const taskList = document.querySelector("#task-list");
 var listOfTasks = [];
