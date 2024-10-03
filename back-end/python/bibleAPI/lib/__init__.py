@@ -20,13 +20,20 @@ class config():
 # bible object
 class bible():
     def __init__(self) -> None:
-        pass
+        self.bibleConfig = config()
 
     def getChapter(self, book, chapter) -> list:
-        res = requests.get(f'{API_URL}/verses/nvi/{book}/{chapter}')
+        localVersion = self.bibleConfig.data
+        res = requests.get(f'{API_URL}/verses/{localVersion["version"]}/{book}/{chapter}')
         return res.json()["verses"]
 
     def getVersicle(self, book, chapter, versicle) -> str:
-        res = requests.get(f'{API_URL}/verses/nvi/{book}/{chapter}/{versicle}')
-
+        localVersion = self.bibleConfig.data
+        res = requests.get(f'{API_URL}/verses/{localVersion["version"]}/{book}/{chapter}/{versicle}')
         return res.json()["text"]
+
+
+# "Loading..." Text
+def loading() -> None:
+    print('Loading...', end='\r')
+    print('          ', end='\r')

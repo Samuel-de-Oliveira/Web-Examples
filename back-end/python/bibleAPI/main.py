@@ -1,11 +1,11 @@
 from lib import *
 
 # Load config
+loading()
 theBible = bible() 
 conf = config()
 
 if __name__ == '__main__':
-    print('loading...', end='\r')
     genesisOne = theBible.getChapter('gn', 20)
     revelationsFinal = theBible.getVersicle('re', 22, 21)
     for i, k in enumerate(genesisOne):
