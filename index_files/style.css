@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Montserrat";
+  font-family: "Montserrat", "sans-serif";
   font-size: 20pt;
   background: #bffdfd;
 }
@@ -26,13 +26,14 @@ header {
   margin-bottom: 5px;
 }
 header p {
+  font-family: "Montserrat", "sans-serif";
   font-weight: medium;
   text-align: justify;
-  margin: 5px;
-  padding: 14px;
+  margin: 12px;
+  padding: 12px;
   color: white;
   background: #059797;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 main {
