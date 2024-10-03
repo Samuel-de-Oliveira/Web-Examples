@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Test</title>
+
+      <!-- Meta -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- Script imports -->
+      <link rel="stylesheet" href="style.css">
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+      <script src="script/app.js" defer></script>
+      <script src="script/main.js" defer></script>
+   </head>
+   <body>
+      <div id="app">
+         <p>My name is {{ name }} and I have {{ age }} years old</p>
+         <section id="button-app">
+            <button @click="num++">Counter: {{ num }}</button>   
+         </section>
+         <section id="version">
+            <i>Version of the project: {{ version }}</i>
+         </section>
+      </div>
+   </body>
+</html>
