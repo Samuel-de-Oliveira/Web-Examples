@@ -7,13 +7,15 @@
 }
 
 body {
-  font-family: "Open Sans", "sans-serif";
+  font-family: "Ubuntu", "Open Sans", "sans-serif";
+  font-weight: lighter;
   font-size: 14pt;
 }
 
 header, footer {
-  padding: 10px;
-  background: #6090a0;
+  padding: 1vh;
+  height: 18vh;
+  background: #334f58;
   color: white;
 }
 
@@ -34,7 +36,7 @@ main #task-list {
   background: #0000bb;
   width: 175px;
   padding: 7px;
-  margin: 3px;
+  margin: 5px;
   border-radius: 5px;
   text-align: center;
 }

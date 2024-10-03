@@ -1,5 +1,5 @@
 // Vars
-$mc1: #6090a0;
+$mc1: #334f58;
 $mc2: #f1d2c7;
 
 // Fonts
@@ -13,18 +13,20 @@ $mc2: #f1d2c7;
 }
 
 body {
-  font-family: "Open Sans", "sans-serif";
+  font-family: "Ubuntu", "Open Sans", "sans-serif";
+  font-weight: lighter;
   font-size: 14pt;
 }
 
 header, footer {
-  padding: 10px;
+  padding:    1vh;
+  height:     18vh;
   background: $mc1;
-  color: white;
+  color:      white;
 }
 
 main {
-  padding: 10px;
+  padding:    10px;
   background: $mc2;
 
   #inside-interface {
@@ -43,7 +45,7 @@ main {
   background: #0000bb;
   width: 175px;
   padding: 7px;
-  margin:  3px;
+  margin:  5px;
   border-radius: 5px;
   text-align: center;
 } .blue-button:hover {
