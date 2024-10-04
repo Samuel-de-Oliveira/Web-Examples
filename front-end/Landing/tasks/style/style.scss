@@ -1,6 +1,6 @@
 // Vars
-$mc1: #334f58;
-$mc2: #f1d2c7;
+$mc1: #558190;
+$mc2: #9ecede;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
@@ -19,10 +19,16 @@ body {
 }
 
 header, footer {
-  padding:    1vh;
-  height:     18vh;
+  padding:    2vh;
   background: $mc1;
   color:      white;
+}
+
+header {
+  height: 18vh;
+}
+footer {
+  height: 12vh;
 }
 
 main {
@@ -36,7 +42,7 @@ main {
   }
 
   #task-list {
-    height: 50vh;
+    height: 55vh;
   }
 }
 

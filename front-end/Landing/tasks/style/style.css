@@ -13,15 +13,22 @@ body {
 }
 
 header, footer {
-  padding: 1vh;
-  height: 18vh;
-  background: #334f58;
+  padding: 2vh;
+  background: #558190;
   color: white;
+}
+
+header {
+  height: 18vh;
+}
+
+footer {
+  height: 12vh;
 }
 
 main {
   padding: 10px;
-  background: #f1d2c7;
+  background: #9ecede;
 }
 main #inside-interface {
   background: white;
@@ -29,7 +36,7 @@ main #inside-interface {
   border-radius: 7px;
 }
 main #task-list {
-  height: 50vh;
+  height: 55vh;
 }
 
 .blue-button {
