@@ -13,6 +13,7 @@ def console(size=3, text='>>: ') -> int:
         except KeyboardInterrupt: exit()
         except: print('\033[1;31mPlease try a valid value!\033[m')
 
+
 # Main database class
 class peopleDatabase():
     def __init__(self) -> None:

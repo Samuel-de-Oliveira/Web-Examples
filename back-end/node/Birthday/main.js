@@ -1,8 +1,20 @@
-var os = require('os');
+// Imports
+const os = require('os');
+const sqlite = require('sqlite3').verbose();
 
+// Sqlite
+const Users  = new sqlite.Database('users.sql');
+Users.serialize( () => {
+  Users.each("SELECT * FROM users", (err, row) => {
+    console.log(row["name"]);
+  });
+});
+Users.close();
+
+// Date 
 var currentDate = new Date();
 var currentYear = currentDate.getFullYear();
-var userBirth   = 2005;
+const userBirth = 2005;
 
 // Verify the user's birth date
 if (userBirth > currentYear) {

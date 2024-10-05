@@ -8,5 +8,8 @@
   },
   "author": "Samuel-de-Oliveira",
   "license": "MIT",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  }
 }
