@@ -3,11 +3,14 @@ const os = require('os');
 const sqlite = require('sqlite3').verbose();
 
 // Sqlite
-const Users  = new sqlite.Database('users.sql');
+const Users = new sqlite.Database('users.sql');
 Users.serialize( () => {
-  Users.each("SELECT * FROM users", (err, row) => {
-    console.log(row["name"]);
-  });
+  // Show the name and the age of user
+   Users.each("SELECT * FROM users", (err, row) => {
+      if (!err) {
+         console.log(`${row["name"]} has ${2024 - row["year"]}.`);
+      }
+   });
 });
 Users.close();
 
@@ -46,4 +49,3 @@ if (userAge <= 14) {
 } else {
    console.log('Then you are an old person...');
 }
-
