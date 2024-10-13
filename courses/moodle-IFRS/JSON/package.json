@@ -1,0 +1,15 @@
+{
+  "name": "JSON",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "run": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuel",
+  "license": "MIT",
+  "description": "Testing JSON in javascript.",
+  "dependencies": {
+    "moment": "^2.30.1"
+  }
+}
