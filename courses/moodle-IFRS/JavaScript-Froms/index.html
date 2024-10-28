@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
-    <title>Hello, world!</title>
+    <title>Formulário com Javascript - Moodle IFRS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
@@ -11,17 +11,22 @@
       <h1>Formulário com Javascript - Moodle IFRS</h1>
     </header>
     <main>
-      <form>
-        <label>Nome: </label><input id="idade" type="text" placeholder="João Ninguém">
+      <form id="formulario" action="#">
+        <label>Gênero:</label><br>
+        <input type="radio" id="masculino" name="genero"><label>Masculino</label>
+        <input type="radio" id="feminino" name="genero"><label>Feminino</label>
         <br>
-        <label>Idade: </label><input id="idade" type="number">
+        <label>massa (Quilos): </label><input id="massa" type="number" step="0.01">
         <br>
-        <input type="submit">
+        <label>Altura (Metros): </label><input id="altura" type="number" step="0.01">
+        <br>
+        <button type="submit">Enviar</button>
       </form>
     </main>
     <footer>
     </footer>
       <div id="resize"></div>
+      <div id="resultado"></div>
     <footer>
   </body>
   <script src="main.js"></script>

@@ -9,3 +9,22 @@ body {
   font-style: normal;
   color: black;
 }
+
+label {
+  font-weight: bold;
+}
+
+footer {
+  padding: 10px;
+  background: darkblue
+}
+
+footer > div {
+  background: darkblue;
+}
+
+#resize {
+  color: white;
+  padding: 2px;
+  background: darkblue;
+}
