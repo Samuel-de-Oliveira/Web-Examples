@@ -1,0 +1,14 @@
+{
+  "name": "temperature-calculator",
+  "version": "1.0.0",
+  "description": "Temperatur Calculator",
+  "main": "scripts/app-vue.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuel",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^3.5.13"
+  }
+}
