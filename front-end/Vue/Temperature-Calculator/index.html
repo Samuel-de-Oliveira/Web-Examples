@@ -12,7 +12,11 @@
 </head>
 <body>
   <div id="app">
-    <p @click="sayHello()">{{ hello }}</p>
+    <form>
+      <input type="number">
+      <button id="calculate">Calculate</button>
+    </form>
+    <p @click="showTemperature()">{{ hello }}</p>
     <p id="text">.</p>
   </div>
 </body>

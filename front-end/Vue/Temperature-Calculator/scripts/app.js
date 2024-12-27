@@ -10,11 +10,18 @@ const Components = {
 
   // App Methods
   methods: {
-    sayHello() {
+    showTemperature() {
       var text = `Hello world ${this.counter}`;
       this.counter++;
       document.querySelector("#text").innerHTML = text;
     },
+
+    Cel2Fah() {},
+    Fah2Cel() {},
+    Cel2Kel() {},
+    Kel2Cel() {},
+    Fah2Kel() {},
+    Kel2Fah() {},
   },
 };
 
