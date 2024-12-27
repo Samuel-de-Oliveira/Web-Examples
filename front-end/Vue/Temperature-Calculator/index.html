@@ -7,11 +7,13 @@
 
   <link rel="stylesheet" href="CSS/Style.css">
 
-  <script scr="scripts/app-vue.js" defer></script>
+  <script src="https://unpkg.com/vue@3.5.13/dist/vue.global.js" defer></script>
+  <script src="scripts/app.js" defer></script>
 </head>
 <body>
-  <div id="App">
-    {{ hello }}
+  <div id="app">
+    <p @click="sayHello()">{{ hello }}</p>
+    <p id="text">.</p>
   </div>
 </body>
 </html>

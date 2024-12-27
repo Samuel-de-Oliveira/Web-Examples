@@ -2,8 +2,8 @@
 const App = {
   data() {
     return {
-      hello: 'Hello!',
-      conter: Vue.det(0),
+      hello:   Vue.ref('Hello, world!'),
+      Counter: Vue.ref(0),
     }
   }
 };
