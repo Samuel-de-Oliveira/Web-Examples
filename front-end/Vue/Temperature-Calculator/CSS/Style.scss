@@ -2,3 +2,16 @@
   margin:  0;
   padding: 0;
 }
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+#app {
+  padding: 5px;
+
+  p {
+    font-size:   14pt;
+    font-weight: bold;
+  }
+}
