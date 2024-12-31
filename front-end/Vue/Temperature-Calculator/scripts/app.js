@@ -12,16 +12,29 @@ const Components = {
   methods: {
     showTemperature() {
       var text = `Hello world ${this.counter}`;
+      var convertion = this['Cel2Fah']
       this.counter++;
-      document.querySelector("#text").innerHTML = text;
+      document.querySelector("#text").innerHTML = text + ` ` + convertion(this.counter);
     },
 
-    Cel2Fah() {},
-    Fah2Cel() {},
-    Cel2Kel() {},
-    Kel2Cel() {},
-    Fah2Kel() {},
-    Kel2Fah() {},
+    Cel2Fah(input) {
+      return (5 * (input + 32)) / 9
+    },
+    Fah2Cel(input) {
+      return (9 * (input - 32)) / 5
+    },
+    Cel2Kel(input) {
+      return input + 273
+    },
+    Kel2Cel(input) {
+      return input - 273
+    },
+    Fah2Kel(input) {
+      return ((input + 459) * 5) / 9
+    },
+    Kel2Fah(input) {
+      return ((input - 495) * 9) / 5
+    },
   },
 };
 
