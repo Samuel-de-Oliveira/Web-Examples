@@ -12,12 +12,12 @@
 </head>
 <body>
   <div id="app">
-    <form>
-      <input type="number">
-      <button id="calculate">Calculate</button>
+    <form action="#">
+      <input id="getvalue" type="number">
+      <button id="calculate" @click="showTemperature()">Calculate</button>
     </form>
-    <p @click="showTemperature()">{{ hello }}</p>
-    <p id="text">.</p>
+    <p>{{ hello }}</p>
+    <p id="text">{{ Temperature }}</p>
   </div>
 </body>
 </html>
