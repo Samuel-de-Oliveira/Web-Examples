@@ -3,9 +3,9 @@ const Components = {
   // App Data
   data() {
     return {
-      hello: Vue.ref('Hello!'),
-      counter: Vue.ref(15),
-      Temperature: Vue.ref(0),
+      hello:       Vue.ref('Please digit any value'),
+      counter:     Vue.ref(15),
+      Temperature: Vue.ref(""),
     }
   },
 
@@ -14,10 +14,14 @@ const Components = {
     // Main Method
     showTemperature() {
       var input = parseInt(document.querySelector("#getvalue").value);
-      var convertion = this['Cel2Fah'];
-      this.counter++;
-      this.Temperature = `Result ${convertion(input).toFixed(2)}`;
-      this.hello = input;
+      if (input) {
+        var convertion = this['Cel2Fah'];
+        this.counter++;
+        this.Temperature = `Result ${convertion(input).toFixed(2)}`;
+        this.hello = `Your value is ${input}`;
+      } else {
+        window.alert('Please digit a valid value!');
+      };
     },
 
     // Temperature Methods

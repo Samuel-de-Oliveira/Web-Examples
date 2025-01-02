@@ -1,17 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
+  text-align: center;
 }
 
-#app {
-  padding: 5px;
+#app header {
+  background-color: rgb(0, 165, 165);
+  color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+#app header h1 {
+  font-weight: rgb(78, 78, 78);
+  font-size: 24pt;
+}
+#app form #getvalue {
+  padding: 8px;
+  background: rgb(241, 241, 241);
+  margin-right: 5px;
+  border: solid 1px;
+  border-radius: 5px;
+}
+#app form button {
+  font: "lato", "Arial", sans-serif;
+  background: rgb(0, 165, 165);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  padding: 8px;
 }
 #app p {
-  font-size: 14pt;
+  margin: 5px;
+  font-size: 18pt;
+}
+#app #temperature {
+  font-size: 24pt;
   font-weight: bold;
 }
 

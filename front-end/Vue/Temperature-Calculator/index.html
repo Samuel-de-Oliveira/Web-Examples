@@ -12,12 +12,17 @@
 </head>
 <body>
   <div id="app">
-    <form action="#">
-      <input id="getvalue" type="number">
-      <button id="calculate" @click="showTemperature()">Calculate</button>
-    </form>
-    <p>{{ hello }}</p>
-    <p id="text">{{ Temperature }}</p>
+    <header>
+      <h1>The Vue's temeperature converter</h1>
+    </header>
+    <main>
+      <form action="#">
+        <input id="getvalue" type="number" placeholder="Temperature Value">
+        <button id="calculate" @click="showTemperature()">Calculate</button>
+      </form>
+      <p>{{ hello }}</p>
+      <p id="temperature">{{ Temperature }}</p>
+    </main>
   </div>
 </body>
 </html>
