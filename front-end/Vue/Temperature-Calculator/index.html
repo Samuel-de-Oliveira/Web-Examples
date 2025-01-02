@@ -16,10 +16,19 @@
       <h1>The Vue's temeperature converter</h1>
     </header>
     <main>
-      <form action="#">
+      <form onsubmit="return false">
+        <select id="getconvertion">
+          <option value="Cel2Fah">Celcius to Fahrenheit</option>
+          <option value="Fah2Cel">Fahrenheit to Celcius</option>
+          <option value="Cel2Kel">Celcius to Kelvin</option>
+          <option value="Kel2Cel">Kelvin to Celcius</option>
+          <option value="Fah2Kel">Fahrenheit to Kelvin</option>
+          <option value="Kel2Fah">Kelvin to Fahrenheit</option>
+        </select>
         <input id="getvalue" type="number" placeholder="Temperature Value">
-        <button id="calculate" @click="showTemperature()">Calculate</button>
+        <button type="submit" id="calculate" @click="showTemperature()">Calculate</button>
       </form>
+      
       <p>{{ hello }}</p>
       <p id="temperature">{{ Temperature }}</p>
     </main>

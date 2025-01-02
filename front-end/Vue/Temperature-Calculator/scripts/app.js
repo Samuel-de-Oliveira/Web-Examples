@@ -14,11 +14,14 @@ const Components = {
     // Main Method
     showTemperature() {
       var input = parseInt(document.querySelector("#getvalue").value);
-      if (input) {
-        var convertion = this['Cel2Fah'];
+      const getcovertion = document.querySelector("#getconvertion").value;
+
+      if (input && getcovertion) {
+        var convertion = this[getcovertion];
         this.counter++;
-        this.Temperature = `Result ${convertion(input).toFixed(2)}`;
+        
         this.hello = `Your value is ${input}`;
+        this.Temperature = `Result ${convertion(input).toFixed(2)}`;
       } else {
         window.alert('Please digit a valid value!');
       };
