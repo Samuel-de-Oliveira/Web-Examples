@@ -3,7 +3,7 @@ const Components = {
   // App Data
   data() {
     return {
-      hello:       Vue.ref('Please digit any value'),
+      information: Vue.ref('Please digit any value'),
       counter:     Vue.ref(15),
       Temperature: Vue.ref(""),
     }
@@ -13,39 +13,47 @@ const Components = {
   methods: {
     // Main Method
     showTemperature() {
-      var input = parseInt(document.querySelector("#getvalue").value);
+      const input   = parseInt(document.querySelector("#getvalue").value);
       const getcovertion = document.querySelector("#getconvertion").value;
 
-      if (input && getcovertion) {
+      if ((input || input == 0) && getcovertion) {
         var convertion = this[getcovertion];
         this.counter++;
         
-        this.hello = `Your value is ${input}`;
-        this.Temperature = `Result ${convertion(input).toFixed(2)}`;
+        this.information = `Your value is ${input}`;
+        this.Temperature = `Result ${convertion(input)}`;
       } else {
+        this.information = `Invalid temperature value!`;
+        this.Temperature = ``;
         window.alert('Please digit a valid value!');
       };
     },
 
     // Temperature Methods
     Cel2Fah(input) {
-      return (9/5 * input) + 32;
+      var value = (9/5 * input) + 32;
+      return `${value.toFixed(2)} Fº`;
     },
     Fah2Cel(input) {
-      return (5/9 * (input - 32));
+      var value = (5/9 * (input - 32));
+      return `${value.toFixed(2)} Cº`;
     },
     Cel2Kel(input) {
-      return input + 273;
+      var value = input + 273;
+      return `${value.toFixed(2)} Kº`;
     },
     Kel2Cel(input) {
-      return input - 273;
+      var value = input - 273;
+      return `${value.toFixed(2)} Cº`;
     },
     Fah2Kel(input) {
       // TODO: Consertar Conversor de Fah e Kel
-      return ((input + 459) * 5) / 9;
+      var value = ((input + 459) * 5) / 9;
+      return `${value.toFixed(2)} Kº`;
     },
     Kel2Fah(input) {
-      return ((input - 495) * 9) / 5;
+      var value = ((input - 495) * 9) / 5;
+      return `${value.toFixed(2)} Fº`;
     },
   },
 };

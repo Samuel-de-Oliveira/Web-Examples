@@ -1,17 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-
 * {
   margin:  0;
   padding: 0;
 }
 
-
 body {
   font-family: "Lato", "Arial", sans-serif;
   text-align: center;
 }
-
 
 #app {  
   header {
@@ -28,7 +25,7 @@ body {
 
   form {
     #getvalue, #getconvertion {
-      font: "Lato", "Arial", sans-serif;
+      font-family: "Lato", "Arial", sans-serif;
       padding: 10px;
       background: rgb(241, 241, 241);
       margin-right: 10px;
@@ -36,7 +33,7 @@ body {
       border-radius: 5px;
     }
     button {
-      font: "Lato", "Arial", sans-serif;
+      font-family: "Lato", "Arial", sans-serif;
       background: rgb(0, 165, 165);
       color: white;
       font-size: 11pt;
@@ -44,9 +41,15 @@ body {
       border-radius: 6px;
       font-weight: bold;
       padding: 10px;
+    } button:hover {
+      background:rgb(165, 255, 255);
+      color: black;
+      transition-duration: 0.35s;
+    } button:active {
+      background: black;
+      color: white;
     }
   }
-
 
   p {
     margin:    10px;
