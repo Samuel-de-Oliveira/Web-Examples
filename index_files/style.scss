@@ -3,7 +3,7 @@
 $link_color:  #abdbdb;
 $link_hover:  #a5dbdb;
 $block_color: #059797;
-$light_color: #bffdfd;
+$light_color: white;
 
 * {
    margin:  0;
@@ -15,6 +15,18 @@ body {
   font-family: "Montserrat", "sans-serif";
   font-size: 20pt;
   background: $light_color;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 12pt;
+  }
+  h1 {
+    font-size: 20pt;
+  }
+  h2 {
+    font-size: 18pt;
+  }
 }
 
 a {

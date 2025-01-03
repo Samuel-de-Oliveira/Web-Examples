@@ -8,9 +8,20 @@
 body {
   font-family: "Montserrat", "sans-serif";
   font-size: 20pt;
-  background: #bffdfd;
+  background: white;
 }
 
+@media (max-width: 600px) {
+  body {
+    font-size: 12pt;
+  }
+  h1 {
+    font-size: 20pt;
+  }
+  h2 {
+    font-size: 18pt;
+  }
+}
 a {
   color: #abdbdb;
   text-decoration: none;
