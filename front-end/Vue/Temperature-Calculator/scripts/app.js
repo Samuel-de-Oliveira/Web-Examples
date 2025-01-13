@@ -15,14 +15,19 @@ const Components = {
     showTemperature() {
       const input   = parseInt(document.querySelector("#getvalue").value);
       const getcovertion = document.querySelector("#getconvertion").value;
+      var informationHTML = document.querySelector("#information");
 
       if ((input || input == 0) && getcovertion) {
         var convertion = this[getcovertion];
         this.counter++;
         
+        informationHTML.style.color = 'black';
+        informationHTML.style.fontWeight = 'normal';
         this.information = `Your value is ${input}`;
         this.Temperature = `Result ${convertion(input)}`;
       } else {
+        informationHTML.style.color = 'red';
+        informationHTML.style.fontWeight = 'bold';
         this.information = `Invalid temperature value!`;
         this.Temperature = ``;
         window.alert('Please digit a valid value!');

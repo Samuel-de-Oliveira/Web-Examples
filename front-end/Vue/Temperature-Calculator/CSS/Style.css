@@ -54,5 +54,13 @@ body {
   font-size: 24pt;
   font-weight: bold;
 }
+#app footer a {
+  color: rgb(0, 107, 107);
+  text-decoration: none;
+}
+#app footer a:hover {
+  color: rgb(0, 165, 165);
+  transition-duration: 0.15s;
+}
 
-/*# sourceMappingURL=Style.css.map */
+/*# sourceMappingURL=style.css.map */
