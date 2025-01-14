@@ -37,6 +37,10 @@ section {
   margin: 10px;
   border-radius: 10px;
 }
+#food div sub {
+  text-align: center;
+  align-items: center;
+}
 #food div:hover {
   background: #00639e;
   border-radius: 15px;
@@ -107,7 +111,7 @@ h2 {
 }
 
 h3 {
-  font-size: 25pt;
+  font-size: 22pt;
   text-align: center;
 }
 

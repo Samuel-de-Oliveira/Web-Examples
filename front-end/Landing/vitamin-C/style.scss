@@ -43,6 +43,11 @@ section {
     padding: 15px;
     margin: 10px;
     border-radius: 10px;
+
+    sub {
+      text-align: center;
+      align-items: center;
+    }
   } div:hover {
     background: $blue_t4;
     border-radius: 15px;
@@ -113,6 +118,6 @@ h2 {
   text-align: center;
 }
 h3 {
-  font-size: 25pt;
+  font-size: 22pt;
   text-align: center;
 }
