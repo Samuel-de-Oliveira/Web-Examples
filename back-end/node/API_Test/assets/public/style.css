@@ -1,0 +1,26 @@
+* {
+  margin:  0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+#title {
+  transition-duration: 0.2s;
+  font-size: 18pt;
+  cursor: pointer;
+}
+
+.vanish {
+  transition-duration: 0.2s;
+  color: black;
+}
+
+.unvanish {
+  transition-duration: 0.2s;
+  color: white;
+}

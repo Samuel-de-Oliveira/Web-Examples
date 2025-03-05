@@ -1,23 +1,30 @@
-import express from 'express'
+import express from 'express';
 
-const app   = express(); // Get the app object
-const Port  = 3000;
+const app  = express(); // Get the app object
+const Port = 3000;
 
-let Values = {
-  home: '/',
-  counter: 0,
+var Values = {
+  Visits_counter: 0, // Count visits
 };
 
 // Home
+app.use(express.static('./assets/public')) // export public files to '/'
 app.get('/', (req, res) => {
-  console.log(Values.counter + " " + req);
-  Values.counter++; 
-  res.send('<h1>Hello, world!</h1>');
+  console.log(Values.Visits_counter + " " + req);
+  Values.Visits_counter++;
+});
+app.post('/', (req, res) => {
+  console.log('Ceci n\'est pas un POST...');
+  res.send('Ceci n\'est pas un POST...');
 });
 
 // Users
 app.get('/users', (req, res) => {
+  // Send a JSON file
   res.json(Values);
 });
 
-app.listen(Port); // Turn on the server
+// Turn on the server
+app.listen(Port, () => {
+  console.log(`The server is runnign at: http://localhost:${Port}`);
+});
