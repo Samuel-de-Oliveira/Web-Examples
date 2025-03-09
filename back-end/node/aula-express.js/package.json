@@ -1,0 +1,17 @@
+{
+  "name": "aula-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "run":  "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Samuel de Oliveira",
+  "license": "",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
