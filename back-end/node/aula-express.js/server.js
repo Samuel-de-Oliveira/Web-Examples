@@ -1,11 +1,14 @@
 import express from 'express';
+import path from 'path';
 
 const app  = express();
+const router = express.Router();
 const port = 3000;
 
 // Root path
 app.get('/', (req, res) => {
-  res.send('Hello, world!');
+  console.log('Ceci n\'est pas une website');
+  res.sendFile(__dirname, 'Assets/index.html');
 });
 
 // --- Users API --- //
@@ -25,11 +28,15 @@ app.delete('/u', (req, res) => {
 });
 
 app.get('/u/:name', (req, res) => {
-  res.send(`Name: ${req.params.name}`)
+  console.log(`Ceci n\'est pas le utilisateur ${req.params.name}...`);
+  res.send(`Ceci n\'est pas le utilisateur ${req.params.name}...`);
 });
 // ----------------- //
 
 // Run Server
-app.listen(port, () => {
+app.listen(port, (err) => {
+  if (err) {
+    console.log(`ERROR >>: ${err}.`);
+  }
   console.log(`Server is working at http://localhost:${port}`);
 });
