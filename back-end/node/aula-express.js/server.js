@@ -1,15 +1,30 @@
 import express from 'express';
 import path from 'path';
 
-const app  = express();
-const router = express.Router();
-const port = 3000;
+const __dirname = path.resolve(path.dirname(''));
+const app       = express();
+const router    = express.Router();
+const port      = 3000;
 
-// Root path
+
+// --- Root path --- //
+// HTML file
 app.get('/', (req, res) => {
   console.log('Ceci n\'est pas une website');
-  res.sendFile(__dirname, 'Assets/index.html');
+  res.sendFile(__dirname + '/Assets/index.html');
 });
+
+// CSS file
+app.get('/style.css', (req, res) => {
+  res.sendFile(__dirname + '/Assets/style.css');
+});
+
+// Javascript file
+app.get('/app.js', (req, res) => {
+  res.sendFile(__dirname + '/Assets/app.js');
+});
+// ----------------- //
+
 
 // --- Users API --- //
 app.get('/u', (req, res) => {
