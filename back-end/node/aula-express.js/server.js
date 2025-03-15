@@ -67,6 +67,7 @@ app.get('/u/:name', (req, res) => {
 app.listen(port, (err) => {
   if (err) {
     console.log(`ERROR >>: ${err}.`);
+    process.exit();
   }
   console.log(`Server is working at http://localhost:${port}`);
 });
