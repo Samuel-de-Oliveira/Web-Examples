@@ -1,5 +1,15 @@
 import express from 'express';
 import path from 'path';
+import mongodb from 'mongodb';
+
+/*
+const MongoClient = mongodb.MongoClient;
+MongoClient.connect('mongodb://localhost:3000/data_base', (err, db) => {
+  if (err) {
+    throw err;
+  }
+});
+*/
 
 // Constants
 const __dirname = path.resolve(path.dirname(''));
