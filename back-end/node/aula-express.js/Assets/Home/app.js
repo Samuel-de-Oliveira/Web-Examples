@@ -1,11 +1,12 @@
-const vue = require('vue')
+// FIX: Try to fix express problem
+import vue from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
 
-var objects = {
-  setup() {
-    console.log(
-      'Ceci n\'est pas une Javascript code...'
-    );
-  },
+const objects = {
+  setup () {
+    return {
+      message: vue.ref('Hello, world!'),
+    }
+  }
 };
 
-vue.createApp(objects).mount('body')
+vue.createApp(objects).mount('#app');

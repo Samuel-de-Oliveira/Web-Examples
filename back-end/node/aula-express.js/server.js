@@ -38,6 +38,7 @@ app.get('/', (req, res) => {
 });
 
 /// Node modules
+/// FIX: Can't import node modules to backend
 app.use('/node_modules', express.static('node_modules'));
 // ----------------- //
 
