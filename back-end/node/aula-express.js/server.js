@@ -2,14 +2,21 @@ import express from 'express';
 import path from 'path';
 import mongodb from 'mongodb';
 
-/*
+// Mongo Data Base
 const MongoClient = mongodb.MongoClient;
-MongoClient.connect('mongodb://localhost:3000/data_base', (err, db) => {
+MongoClient.connect('mongodb://localhost:27017/users', (err, db) => {
   if (err) {
     throw err;
   }
+
+  db.collection('users').find().toArray((err, result) => {
+    if (err) {
+      throw err;
+    }
+    
+    console.log(result);
+  });
 });
-*/
 
 // Constants
 const __dirname = path.resolve(path.dirname(''));
