@@ -23,20 +23,26 @@ app.use('/static', express.static(__dirname + '/static'))
 //// Home ////
 app.get('/home', (req, res) => {
   res.render('index', {
-    title: "HomePage",
-    stylePath: "static/blue.css",
+    title:      "HomePage",
+    stylePath:  "static/mainPage.css",
     scriptPath: "static/mainPage.js",
+    mainPage:   "Ceci n'est pas un template..."
   });
 });
 //////////////
 
 //// Users ////
+// Create and remove user
 app.get('/u', (req, res) => {
-  res.send('Users!');
+  res.send('Create and remove users here. Coming soon...');
 });
 
-app.get('/u/:user', (req, res) => {
-  res.send(`Username: ${req.params.user}`);
+// access user's page
+app.get('/u/:username', (req, res) => {
+  res.render('users', {
+    userName: req.params.username,
+    scriptPath: "static/mainPage.js",
+  });
 });
 ///////////////
 
