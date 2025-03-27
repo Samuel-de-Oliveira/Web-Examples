@@ -12,6 +12,7 @@
   "type": "module",
   "dependencies": {
     "express": "^4.21.2",
+    "express-handlebars": "^8.0.1",
     "hbs": "^4.2.0"
   }
 }

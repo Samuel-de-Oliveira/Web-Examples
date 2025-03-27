@@ -1,4 +1,5 @@
 import express from 'express';
+import exphbs  from 'express-handlebars';
 import path from 'path';
 import { title } from 'process';
 
@@ -7,7 +8,13 @@ const __dirname = path.resolve(path.dirname(''));
 const app  = express();
 const PORT = 3000;
 
+// Headlebars config
+const hbs  = exphbs.create({
+  /* No config */
+});
+
 // Sets
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'hbs');
 
 //// Root ////
