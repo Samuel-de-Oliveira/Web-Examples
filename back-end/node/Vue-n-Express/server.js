@@ -30,9 +30,9 @@ app.use('/static', express.static(__dirname + '/static'))
 app.get('/home', (req, res) => {
   res.render('index', {
     title:      "HomePage",
-    stylePath:  "static/mainPage.css",
-    scriptPath: "static/mainPage.js",
-    mainPage:   "Ceci n'est pas un template..."
+    stylePath:  "/static/mainPage.css",
+    scriptPath: "/static/mainPage.js",
+    mainPage:   "Ceci n'est pas un template...",
   });
 });
 //////////////
@@ -47,16 +47,26 @@ app.get('/u', (req, res) => {
 app.get('/u/:username', (req, res) => {
   res.render('users', {
     userName: req.params.username,
-    scriptPath: "static/mainPage.js",
+    scriptPath: "/static/mainPage.js",
+  });
+});
+
+// API for every user
+app.get('/u/:username/API', (req, res) => {
+  res.json({
+    userName:  req.params.username,
   });
 });
 ///////////////
 
-// "Page not found" system
+//// "Page not found" system ////
 app.use((req, res, next) => {
-  res.send(`The <b>${req.path}</b> path does not exist!`);
-  next();
-})
+  res.render('page_not_found', {
+    pagePath:  req.path,
+    stylePath: '/static/mainPage.css',
+  });
+});
+/////////////////////////////////
 
 // Run server //
 app.listen(PORT, (err) => {

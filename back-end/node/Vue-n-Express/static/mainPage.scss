@@ -1,9 +1,19 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 * {
   margin:  0;
   padding: 0;
-  font-family: sans-serif, "Arial";
+  font-family: "Lato", sans-serif, "Arial";
 }
 
-body {
-  font-size: 14pt;
+h1 {
+  font-size: 30pt;
+  padding-top: 5px;
+  padding-left: 7px;
+}
+
+p {
+  font-size: 25pt;
+  padding-left: 12px;
 }
