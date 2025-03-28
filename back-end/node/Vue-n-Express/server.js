@@ -1,7 +1,6 @@
 import express from 'express';
 import exphbs  from 'express-handlebars';
 import path from 'path';
-import { title } from 'process';
 
 // Constants
 const __dirname = path.resolve(path.dirname(''));
@@ -52,6 +51,12 @@ app.get('/u/:username', (req, res) => {
   });
 });
 ///////////////
+
+// "Page not found" system
+app.use((req, res, next) => {
+  res.send(`The <b>${req.path}</b> path does not exist!`);
+  next();
+})
 
 // Run server //
 app.listen(PORT, (err) => {
