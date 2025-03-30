@@ -8,3 +8,12 @@ body {
   color: white;
   background: #333333;
 }
+
+main {
+  margin: 10px;
+}
+
+header, footer {
+  background: black;
+  padding: 15px;
+}
