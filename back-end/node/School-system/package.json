@@ -1,0 +1,20 @@
+{
+  "name": "school-system",
+  "version": "0.1",
+  "description": "Academic system for Colégio Alfa",
+  "license": "ISC",
+  "author": "Samuel de Oliveira",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "server": "node server.js --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1",
+    "handlebars": "^4.7.8",
+    "hbs": "^4.2.0",
+    "mongodb": "^6.15.0"
+  }
+}
