@@ -1,4 +1,4 @@
-from flask import Flask, url_for, render_template
+from flask import Flask, url_for, render_template, Config
 from markupsafe import escape
 from random import randint
 
@@ -11,8 +11,10 @@ backgrounds: list = [
     'gray',
 ]
 
-app = Flask(__name__)
+DEBUG: bool = True
 
+app = Flask(__name__)
+app.config.from_object(__name__)
 
 @app.route('/')
 def index() -> str:
@@ -23,6 +25,7 @@ def index() -> str:
 def show_name(username: str) -> str:
     background_number: int = randint(0, len(backgrounds) - 1)
     print(backgrounds[background_number])
+
     return render_template(
         'hello.hbs',
         username=escape(username),
