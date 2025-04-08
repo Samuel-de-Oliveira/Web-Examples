@@ -1,7 +1,7 @@
 import express from 'express';
 import exphps  from 'express-handlebars';
 import path    from 'path';
-import bodyParser from 'body-parser';
+import { body, validationResult } from "express-validator";
 
 const __dirname = path.resolve(path.dirname(""));
 const app = express();
@@ -10,12 +10,20 @@ const hbs  = exphps.create();
 
 app.set('view engine', 'hbs');
 app.engine('handlebars', hbs.engine);
-app.use(bodyParser.urlencoded({ extended: true }));
 
+///// Root path /////
+// Main page
 app.get('/', (req, res) => {
-  res.send('Hello, world!');
+  res.render('index', {
+    task_list: "<li>Testing...</li>",
+  });
 });
 
+// Static
+app.use('/static', express.static(__dirname + "/static"));
+//////////////////////
+
+// Listener
 app.listen(PORT, (err) => {
   if (err) {
     throw err;
