@@ -9,13 +9,15 @@ server_db = sqlite3.connect('server.sqlite3', check_same_thread=False)
 db_cursor = server_db.cursor()
 
 # Create table
-db_cursor.execute("""
+db_cursor.execute(
+    """
     CREATE TABLE IF NOT EXISTS users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         username TEXT NOT NULL,
         password TEXT NOT NULL
     );
-""")
+"""
+)
 
 DEBUG: bool = True
 PORT: int = 3000
@@ -34,21 +36,26 @@ def index() -> str:
 
 @app.route('/auth')
 def authentication() -> str:
-    users_db = server_db.cursor()
-    username: str = request.args.get('username')
-    password: str = request.args.get('password')
+    username: str = request.args.get('username').lower()
+    password: str = request.args.get('password').lower()
 
-    users_db.execute(f"""
-        INSERT INTO users VALUES (
-            NULL,
-            {username},
-            {password}
-        );
-    """)
-    server_db.commit()
-    users_db.close()
+    db_cursor.execute("SELECT username FROM users;")
+    db_usernames: list = db_cursor.fetchall()
+    users: list = []
+    for db_username in db_usernames:
+        users.append(db_username[0])
 
-    return f'Your username is: {username}'
+    print(users)
+    if username in users:
+        return f'The user {username} Alredy exists!'
+    else:
+        db_cursor.execute(
+            'INSERT INTO users (username, password) VALUES (?, ?);',
+            [username, password],
+        )
+        server_db.commit()
+
+        return f'Your username is: {username}'
 
 
 if __name__ == '__main__':
