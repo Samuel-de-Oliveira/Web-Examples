@@ -12,9 +12,11 @@ backgrounds: list = [
 ]
 
 DEBUG: bool = True
+PORT: int = 3000
 
 app = Flask(__name__)
 app.config.from_object(__name__)
+
 
 @app.route('/')
 def index() -> str:
@@ -31,3 +33,7 @@ def show_name(username: str) -> str:
         username=escape(username),
         background_name=backgrounds[background_number],
     )
+
+
+if __name__ == '__main__':
+    app.run(debug=DEBUG, port=PORT)

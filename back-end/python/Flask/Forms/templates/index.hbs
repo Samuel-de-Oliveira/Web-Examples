@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ style_path }}">
+
+    <script src="{{ script_path }}"></script>
+    <title>{{ page_title }}</title>
+  </head>
+  <body>
+    <header>
+      <h1>Login page</h1>
+    </header>
+    <main>
+      <form action="/auth" method="get">
+        <label for="username">Username: </label>
+        <input type="text" name="username" placeholder="Username" id="username">
+        <br>
+        <label for="password">Password: </label>
+        <input type="password" name="password" placeholder="Password" id="password">
+        <br>
+        <input type="submit" title="Send">
+      </form>
+    </main>
+  </body>
+</html>
