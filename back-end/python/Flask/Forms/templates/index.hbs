@@ -6,14 +6,15 @@
 
     <link rel="stylesheet" href="{{ style_path }}">
 
-    <script src="{{ script_path }}"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="{{ script_path }}" async></script>
     <title>{{ page_title }}</title>
   </head>
   <body>
-    <header>
-      <h1>Login page</h1>
-    </header>
-    <main>
+    <div class="centering" id="login">
+      <div id="title">
+        <h1>Login page</h1>
+      </div>
       <form action="/auth" method="get">
         <label for="username">Username: </label>
         <input type="text" name="username" placeholder="Username" id="username" min="3">
@@ -21,8 +22,8 @@
         <label for="password">Password: </label>
         <input type="password" name="password" placeholder="Password" id="password" min="3">
         <br>
-        <input type="submit" title="Send">
+        <input type="submit" title="Send" value="Send" align="left">
       </form>
-    </main>
+    </div>
   </body>
 </html>

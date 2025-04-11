@@ -2,19 +2,55 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+#title {
   font-family: "Lato", sans-serif;
+  width: 400px;
+  margin-bottom: 5px;
+  padding: 10px;
+  font-size: 18pt;
+  text-align: center;
+  border-radius: 5px;
+  background: rgb(160, 7, 7);
+  color: white;
 }
 
 form {
-  font-size: 14pt;
+  font-size: 16pt;
   font-family: "Noto sans", sans-serif;
+  width: 380px;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  background: rgb(160, 7, 7);
 }
 form label {
   font-weight: bold;
 }
 form input {
-  padding: 8px;
+  padding: 10px;
+  font-size: 80%;
   font-style: italic;
+}
+form input[type=submit] {
+  width: 100%;
+  text-align: center;
+}
+form input[type=text] {
+  margin: 5px;
+  margin-bottom: 7px;
+}
+form input[type=password] {
+  margin: 5px;
+  margin-bottom: 7px;
+}
+
+.centering {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=style.css.map */
