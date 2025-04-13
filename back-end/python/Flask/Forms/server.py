@@ -28,12 +28,12 @@ HOST: str = '127.0.0.2'
 # Root path
 @app.route('/')
 def index() -> str:
-    return redirect(url_for('login'))
+    return redirect(url_for('register'))
 
 
 # Login path
-@app.route('/login')
-def login() -> str:
+@app.route('/register')
+def register() -> str:
     return render_template(
         'index.hbs',
         style_path='static/style.css',
@@ -68,7 +68,7 @@ def authentication() -> str:
     else:
         print('No login...')
 
-    return redirect(url_for('login'))
+    return redirect(url_for('register'))
 
 
 if __name__ == '__main__':
