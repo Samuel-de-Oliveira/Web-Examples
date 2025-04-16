@@ -28,12 +28,12 @@ HOST: str = '127.0.0.2'
 # Root path
 @app.route('/')
 def index() -> str:
-    return redirect(url_for('login'))
+    return redirect(url_for('register'))
 
 
 # Login path
-@app.route('/login')
-def login() -> str:
+@app.route('/register')
+def register() -> str:
     return render_template(
         'index.hbs',
         style_path='static/style.css',
@@ -43,32 +43,48 @@ def login() -> str:
 
 
 # Authentication method
-@app.route('/auth')
+@app.route('/auth', methods=['GET', 'POST'])
 def authentication() -> str:
-    username: str = request.args.get('username').lower()
-    password: str = request.args.get('password').lower()
+    if request.method == 'POST':
+        username: str = request.args.get('username').lower()
+        password: str = request.args.get('password').lower()
 
-    if username and password:
-        db_cursor.execute('SELECT username FROM users;')
-        db_usernames: list = db_cursor.fetchall()
-        users: list = []
-        for db_username in db_usernames:
-            users.append(db_username[0])
+        if username and password:
+            db_cursor.execute('SELECT username FROM users;')
+            db_usernames: list = db_cursor.fetchall()
+            users: list = []
+            for db_username in db_usernames:
+                users.append(db_username[0])
 
-        print(users)
-        if username in users:
-            return f'The user {username} Alredy exists!'
+            print(users)
+            if username in users:
+                return f'The user {username} Alredy exists!'
+            else:
+                db_cursor.execute(
+                    'INSERT INTO users (username, password) VALUES (?, ?);',
+                    [username, password],
+                )
+                server_db.commit()
+
         else:
-            db_cursor.execute(
-                'INSERT INTO users (username, password) VALUES (?, ?);',
-                [username, password],
-            )
-            server_db.commit()
+            print('No login...')
 
+    return redirect(url_for('register'))
+
+
+# Redirect
+@app.route('/u', methods=['GET'])
+def user() -> str:
+    return redirect(url_for('register'))
+
+
+# Users
+@app.route('/u/<usr>', methods=['GET'])
+def users(usr) -> str:
+    if usr:
+        return f'Hello, {usr}!'
     else:
-        print('No login...')
-
-    return redirect(url_for('login'))
+        return 'This user does not exists.'
 
 
 if __name__ == '__main__':
