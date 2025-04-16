@@ -1,5 +1,6 @@
-from flask import Flask, url_for, render_template, Config, request, redirect
+import secrets
 import sqlite3
+from flask import Flask, url_for, render_template, Config, request, redirect
 from markupsafe import escape
 
 app = Flask(__name__)
@@ -22,7 +23,7 @@ db_cursor.execute(
 # Config
 DEBUG: bool = True
 PORT: int = 3000
-HOST: str = '127.0.0.2'
+HOST: str = '127.0.0.1'
 
 
 # Root path
@@ -32,18 +33,46 @@ def index() -> str:
 
 
 # Login path
-@app.route('/register')
+@app.route('/register', methods=['GET', 'POST'])
 def register() -> str:
-    return render_template(
-        'index.hbs',
-        style_path='static/style.css',
-        script_path='static/app.js',
-        page_title='Sign in Page - Popular',
-    )
+    if request.method == 'POST':
+        username: str = request.form['username']
+        password: str = request.form['password']
+        print(f'This data will be registered: {username} and {password}')
+
+        if username and password:
+            db_cursor.execute('SELECT username FROM users;')
+            db_usernames: list = db_cursor.fetchall()
+            users: list = []
+            for db_username in db_usernames:
+                users.append(db_username[0])
+
+            print(users)
+            if username in users:
+                return f'The user {username} Alredy exists!'
+            else:
+                db_cursor.execute(
+                    'INSERT INTO users (username, password) VALUES (?, ?);',
+                    [username, password],
+                )
+                server_db.commit()
+
+        else:
+            print('No login...')
+
+        return redirect(url_for('register'))
+
+    else:
+        return render_template(
+            'index.hbs',
+            style_path='static/style.css',
+            script_path='static/app.js',
+            page_title='Sign in Page - Popular',
+        )
 
 
 # Authentication method
-@app.route('/auth', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def authentication() -> str:
     if request.method == 'POST':
         username: str = request.args.get('username').lower()
