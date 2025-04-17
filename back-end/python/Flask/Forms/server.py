@@ -1,7 +1,6 @@
 import secrets
 import sqlite3
 from flask import Flask, url_for, render_template, Config, request, redirect
-from markupsafe import escape
 
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -20,14 +19,22 @@ db_cursor.execute(
 """
 )
 
-# Config
-DEBUG: bool = True
-PORT: int = 3000
-HOST: str = '127.0.0.1'
+####### TOOLS #######
+def get_users() -> list:
+    db_cursor.execute('SELECT username FROM users;')
+    db_usernames: list = db_cursor.fetchall()
+    users: list = []
+    for db_username in db_usernames:
+        users.append(db_username[0])
+
+    return users
 
 
+#####################
+
+####### PATHS #######
 # Root path
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index() -> str:
     return redirect(url_for('register'))
 
@@ -41,15 +48,11 @@ def register() -> str:
         print(f'This data will be registered: {username} and {password}')
 
         if username and password:
-            db_cursor.execute('SELECT username FROM users;')
-            db_usernames: list = db_cursor.fetchall()
-            users: list = []
-            for db_username in db_usernames:
-                users.append(db_username[0])
+            users: list = get_users()
 
             print(users)
             if username in users:
-                return f'The user {username} Alredy exists!'
+                return f'The username {username} Alredy exists!'
             else:
                 db_cursor.execute(
                     'INSERT INTO users (username, password) VALUES (?, ?);',
@@ -58,7 +61,7 @@ def register() -> str:
                 server_db.commit()
 
         else:
-            print('No login...')
+            print('There is no login...')
 
         return redirect(url_for('register'))
 
@@ -79,13 +82,8 @@ def authentication() -> str:
         password: str = request.args.get('password').lower()
 
         if username and password:
-            db_cursor.execute('SELECT username FROM users;')
-            db_usernames: list = db_cursor.fetchall()
-            users: list = []
-            for db_username in db_usernames:
-                users.append(db_username[0])
+            users: list = get_users()
 
-            print(users)
             if username in users:
                 return f'The user {username} Alredy exists!'
             else:
@@ -96,7 +94,7 @@ def authentication() -> str:
                 server_db.commit()
 
         else:
-            print('No login...')
+            print('There is no login...')
 
     return redirect(url_for('register'))
 
@@ -108,13 +106,24 @@ def user() -> str:
 
 
 # Users
-@app.route('/u/<usr>', methods=['GET'])
-def users(usr) -> str:
-    if usr:
-        return f'Hello, {usr}!'
+@app.route('/u/<usr>', methods=['GET', 'POST'])
+def users(usr: str) -> str:
+    users: list = get_users()
+
+    if usr.lower() in users:
+        return render_template('user.hbs', username=usr.lower())
     else:
         return 'This user does not exists.'
 
 
+#####################
+
+# Run server
 if __name__ == '__main__':
+    # Config
+    DEBUG: bool = True
+    PORT: int = 3000
+    HOST: str = '127.0.0.1'
+
+    # Run
     app.run(debug=DEBUG, port=PORT, host=HOST)

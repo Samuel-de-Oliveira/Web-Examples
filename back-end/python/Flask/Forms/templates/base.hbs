@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block page_title %}{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      <h1>Ceci n'est pas un title</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Login in</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {% block page_content %}
+      {% endblock %}
+    </main>
+    <footer>
+      <sub>Created by: Samuel de Oliveira - All rights reseved.</sub>
+    </footer>
+  </body>
+</html>
