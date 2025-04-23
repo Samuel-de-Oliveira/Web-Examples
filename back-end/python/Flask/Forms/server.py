@@ -19,6 +19,17 @@ db_cursor.execute(
 """
 )
 
+Existents_colors: list = [
+    'Green',
+    'Yellow',
+    'Blue',
+    'Gray',
+    'Black',
+    'Red',
+    'Purple',
+]
+
+
 ####### TOOLS #######
 def get_users() -> list:
     db_cursor.execute('SELECT username FROM users;')
@@ -117,6 +128,29 @@ def users(usr: str) -> str:
 
 
 #####################
+
+###### Real Form ######
+@app.route('/real-form', methods=['GET', 'POST'])
+def real_form() -> str:
+    # Show the informations got in form
+    if request.method == 'POST':
+        username: str = request.form['name'].capitalize()
+        color: str = request.form['color'].capitalize()
+
+        text_message: str = f"Your name is {username} and your favorite color is {color}\n"
+
+        if color in Existents_colors:
+            text_message += "Your color is in our database!"
+        else:
+            text_message += "Your color isn't in our database! :("
+
+        return text_message
+
+    # Show form
+    else:
+        return render_template('form.hbs')
+#######################
+
 
 # Run server
 if __name__ == '__main__':

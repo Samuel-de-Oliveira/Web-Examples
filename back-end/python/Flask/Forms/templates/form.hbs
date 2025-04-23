@@ -1,0 +1,17 @@
+{% extends 'base.hbs' %}
+
+{% block page_title %}
+  Forms
+{% endblock %}
+
+{% block page_content %}
+  <form action="#" method="post">
+    <label for="name">Your name: </label>
+    <input name="name" type="text" placeholder="Jhon Doe">
+    <br>
+    <label for="color">Which is your favorite color: </label>
+    <input name="color" type="text" placeholder="Greerange">
+
+    <input type="submit" value="Done">
+  </form>
+{% endblock%}
