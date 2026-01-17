@@ -1,14 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Montserrat", "sans-serif";
-  font-size: 20pt;
-  background: white;
+  font-family: "Lato", "sans-serif";
+  font-size: 18pt;
+  background: #e0e0e0;
 }
 
 @media (max-width: 600px) {
@@ -25,6 +29,7 @@ body {
 a {
   color: #abdbdb;
   text-decoration: none;
+  transition-duration: 0.2s;
 }
 
 a:hover {
@@ -37,38 +42,66 @@ header {
   margin-bottom: 5px;
 }
 header p {
-  font-family: "Montserrat", "sans-serif";
+  font-family: "Lato", "sans-serif";
   font-weight: medium;
   text-align: justify;
+  font-size: 18pt;
   margin: 12px;
   padding: 12px;
   color: white;
   background: #059797;
   border-radius: 6px;
 }
+header nav {
+  padding: 5px;
+  color: white;
+  background: #059797;
+  margin: 12px;
+  border-radius: 5px;
+  transition-duration: 0.1s;
+}
+header nav ul {
+  display: flex;
+}
+header nav a {
+  margin-left: 15px;
+  color: white;
+  text-decoration: underline;
+}
 
 main {
   padding: 20px;
-  font-size: 15pt;
+  font-size: 16pt;
 }
 main ul {
   margin-left: 10px;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
 main ul li {
   padding: 10px;
   margin: 7px;
   background: #059797;
+  text-align: center;
   color: white;
   border-radius: 3px;
+  transition-duration: 0.1s;
 }
 main ul li a {
-  color: white;
+  color: #101010;
+  font-size: 17pt;
+  font-weight: 700;
+}
+main ul li p {
+  font-size: 15pt;
 }
 main ul li:hover {
   background: black;
   border-radius: 6px;
   transition-duration: 0.3s;
+}
+main ul li:hover a {
+  color: #e0e0e0;
 }
 main ul li:active {
   background: white;
@@ -76,7 +109,7 @@ main ul li:active {
   transition-duration: 0.2s;
 }
 main ul li:active a {
-  color: black;
+  color: #e0e0e0;
 }
 
 footer {
@@ -96,14 +129,15 @@ footer ul li:hover {
 }
 
 h1 {
-  font-family: "nunito";
+  font-family: "Ubuntu", sans-serif;
+  padding-top: 25px;
   text-align: center;
   font-size: 35pt;
 }
 
 h2 {
-  font-family: "nunito";
-  font-size: 26pt;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 25pt;
 }
 
 /*# sourceMappingURL=style.css.map */

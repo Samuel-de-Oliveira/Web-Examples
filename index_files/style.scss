@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 $link_color:  #abdbdb;
 $link_hover:  #a5dbdb;
 $block_color: #059797;
-$light_color: white;
+$red_color:   #101010;
+$light_color: #e0e0e0;
 
 * {
    margin:  0;
@@ -11,9 +12,13 @@ $light_color: white;
    list-style-type: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Montserrat", "sans-serif";
-  font-size: 20pt;
+  font-family: "Lato", "sans-serif";
+  font-size: 18pt;
   background: $light_color;
 }
 
@@ -32,6 +37,7 @@ body {
 a {
   color: $link_color;
   text-decoration: none;
+  transition-duration: 0.2s;
 }
 a:hover {
   color: $link_hover;
@@ -43,47 +49,83 @@ header {
   margin-bottom: 5px;
 
   p {
-    font-family: "Montserrat", "sans-serif";
+    font-family: "Lato", "sans-serif";
     font-weight: medium;
     text-align: justify;
+    font-size: 18pt;
     margin:  12px;
     padding: 12px;
     color:   white;
     background: $block_color;
     border-radius: 6px;
   }
+
+  nav {
+    padding: 5px;
+    color: white;
+    background: $block_color;
+    margin: 12px;
+    border-radius: 5px;
+    transition-duration: 0.1s;
+
+    ul {
+      display: flex;
+    }
+
+    a {
+      margin-left: 15px;
+      color: white;
+      text-decoration: underline;
+    }
+  }
 }
 
 main {
   padding: 20px;
-  font-size: 15pt;
+  font-size: 16pt;
   ul {
     margin-left: 10px;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
     li {
       padding: 10px;
       margin: 7px;
       background: $block_color;
+      text-align: center;
       color: white;
       border-radius: 3px;
+      transition-duration: 0.1s;
+
       a {
-        color: white;
+        color: $red_color;
+        font-size: 17pt;
+        font-weight: 700;
+      }
+      p {
+        font-size: 15pt;
       }
     } li:hover {
       background: black;
       border-radius: 6px;
       transition-duration: 0.3s;
+      
+      a {
+        color: $light_color;
+      }
+
     } li:active {
       background: white;
       color: black;
       transition-duration: 0.2s;
+
       a {
-        color: black;
+        color: $light_color;
       }
     }
+  }
 }
-  
-}
+
 footer {
   padding: 10px;
   color: white;
@@ -101,12 +143,13 @@ footer {
 }
 
 h1 {
-  font-family: "nunito";
+  font-family: "Ubuntu", sans-serif;
+  padding-top: 25px;
   text-align: center;
   font-size: 35pt;
 }
 
 h2 {
-  font-family: "nunito";
-  font-size: 26pt;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 25pt;
 }
