@@ -22,18 +22,6 @@ body {
   background: $light_color;
 }
 
-@media (max-width: 600px) {
-  body {
-    font-size: 12pt;
-  }
-  h1 {
-    font-size: 20pt;
-  }
-  h2 {
-    font-size: 18pt;
-  }
-}
-
 a {
   color: $link_color;
   text-decoration: none;
@@ -96,6 +84,7 @@ main {
       color: white;
       border-radius: 3px;
       transition-duration: 0.1s;
+      cursor: pointer;
 
       a {
         color: $red_color;
@@ -152,4 +141,32 @@ h1 {
 h2 {
   font-family: "Ubuntu", sans-serif;
   font-size: 25pt;
+}
+
+// Media query - mobile phone
+@media (max-width: 700px) {
+  body {
+    font-size: 12pt;
+  }
+
+  header {
+    p {
+      font-size: 15pt;  
+    }
+  }
+  main {
+    padding: 15px;
+
+    ul {
+      margin-left: 0;
+      display: grid;
+      grid-template-columns: auto;
+    }
+  }
+  h1 {
+    font-size: 22pt;
+  }
+  h2 {
+    font-size: 18pt;
+  }
 }

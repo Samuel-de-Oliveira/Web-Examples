@@ -15,17 +15,6 @@ body {
   background: #e0e0e0;
 }
 
-@media (max-width: 600px) {
-  body {
-    font-size: 12pt;
-  }
-  h1 {
-    font-size: 20pt;
-  }
-  h2 {
-    font-size: 18pt;
-  }
-}
 a {
   color: #abdbdb;
   text-decoration: none;
@@ -86,6 +75,7 @@ main ul li {
   color: white;
   border-radius: 3px;
   transition-duration: 0.1s;
+  cursor: pointer;
 }
 main ul li a {
   color: #101010;
@@ -138,6 +128,29 @@ h1 {
 h2 {
   font-family: "Ubuntu", sans-serif;
   font-size: 25pt;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 12pt;
+  }
+  header p {
+    font-size: 15pt;
+  }
+  main {
+    padding: 15px;
+  }
+  main ul {
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: auto;
+  }
+  h1 {
+    font-size: 22pt;
+  }
+  h2 {
+    font-size: 18pt;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
