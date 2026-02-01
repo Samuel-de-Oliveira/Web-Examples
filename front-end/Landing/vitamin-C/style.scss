@@ -27,7 +27,10 @@ body {
   margin-top: 10px;
 }
 
-ul {list-style-type: none;}
+ul {
+  list-style-type: none;
+}
+
 section {
   margin: 20px;
   margin-top: 5px; 
@@ -120,4 +123,21 @@ h2 {
 h3 {
   font-size: 22pt;
   text-align: center;
+}
+
+@media (max-width: 700px) {
+  #food {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  header {
+    nav {
+      font-size: 14px;
+    }
+  }
+
+  p {
+    font-size: 19px;
+  }
 }
